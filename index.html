@@ -9,6 +9,7 @@
 <meta property="og:title" content="Vendeu, Mas Não Sobrou">
 <meta property="og:description" content="Fluxo de caixa, precificação e cobrança sem perder cliente. Edição 2026.">
 <meta property="og:locale" content="pt_BR">
+<meta property="og:image" content="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?w=1200&h=630&fit=crop&q=80">
 <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
 <link rel="icon" type="image/png" href="img/favicon.png">
 <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
@@ -45,7 +46,12 @@ header{background:var(--navy-deep);padding:20px 0;position:sticky;top:0;z-index:
 header .container{display:flex;align-items:center;justify-content:space-between}
 .logo{display:flex;align-items:center;gap:10px;color:#fff;font-family:'Lora',serif;font-weight:700;font-size:18px}
 .logo-icon{width:34px;height:34px;background:var(--gold);border-radius:8px;display:flex;align-items:center;justify-content:center;color:var(--navy-deep);font-weight:800}
-.hero{background:linear-gradient(160deg,var(--navy) 0%,var(--navy-deep) 100%);color:#fff;padding:80px 0;position:relative;overflow:hidden}
+.hero{
+  background-image: linear-gradient(160deg, rgba(15,42,68,.88) 0%, rgba(10,29,48,.94) 100%), url('https://images.unsplash.com/photo-1556740738-b6a63e27c4df?w=1800&h=1200&fit=crop&q=80');
+  background-size: cover;
+  background-position: center;
+  color:#fff;padding:100px 0;position:relative;overflow:hidden;min-height:520px;display:flex;align-items:center
+}
 .hero::before{content:'';position:absolute;width:400px;height:400px;border-radius:50%;background:rgba(212,162,76,.08);top:-150px;right:-100px}
 .hero-content{position:relative;z-index:1;max-width:680px}
 .eyebrow{color:var(--gold);font-size:13px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:16px;display:block}
@@ -84,6 +90,14 @@ details{border:1px solid #E5E5E0;border-radius:10px;margin-bottom:12px;padding:1
 summary{cursor:pointer;font-weight:600;color:var(--navy)}
 details p{margin-top:12px;font-size:14px;color:var(--cinza-claro)}
 footer{background:var(--navy-deep);color:#9FADB9;text-align:center;padding:32px 0;font-size:13px}
+
+.split{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;margin-top:8px}
+.split-img{border-radius:16px;width:100%;height:400px;object-fit:cover;box-shadow:0 20px 44px rgba(15,42,68,.22)}
+.split ul{list-style:none;margin-top:20px}
+.split li{padding:8px 0 8px 28px;position:relative;font-size:15px}
+.split li::before{content:'✓';position:absolute;left:0;color:var(--gold);font-weight:700}
+@media(max-width:820px){.split{grid-template-columns:1fr;gap:28px}.split-img{height:280px}}
+
 @media(max-width:640px){.hero h1{font-size:32px}.msg-grid{grid-template-columns:1fr}}
 </style>
 </head>
@@ -147,6 +161,24 @@ footer{background:var(--navy-deep);color:#9FADB9;text-align:center;padding:32px 
       <div class="msg-card"><h4>Lembrete antes do vencimento</h4><p>Um toque gentil, sem soar como cobrança — evita o atraso antes que ele aconteça.</p></div>
       <div class="msg-card"><h4>Cobrança educada pós-vencimento</h4><p>Firme e claro, sem constrangimento, mantendo a relação.</p></div>
       <div class="msg-card"><h4>Negociação de dívida em aberto</h4><p>Como propor parcelamento sem parecer desesperado.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="split">
+      <img class="split-img" src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=900&h=800&fit=crop&q=80" alt="Interior de loja pequena organizada, com produtos em prateleiras" loading="lazy">
+      <div>
+        <span class="eyebrow" style="color:var(--gold)">O que muda de verdade</span>
+        <h2>Vender bem não é o problema.<br><em style="font-style:italic;color:var(--gold)">Controlar</em> é.</h2>
+        <ul>
+          <li>Saber exatamente quanto sobra no fim do mês</li>
+          <li>Tirar seu pró-labore sem culpa e sem adivinhação</li>
+          <li>Precificar com margem real, não no "achismo"</li>
+          <li>Ter reserva pro mês fraco, sem susto</li>
+        </ul>
+      </div>
     </div>
   </div>
 </section>
